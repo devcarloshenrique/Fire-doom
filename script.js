@@ -102,4 +102,4 @@ function estruturaArray() {
 	
 	estruturaArray()
 
-	setInterval(() => inserirCores(50), 200);	
+	setInterval(() => inserirCores(50), 1);	

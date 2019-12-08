@@ -5,17 +5,23 @@
 	<title>Document</title>
 	<style>
 		
-		table {
-			border-spacing: 0px;
-		}
-		td {
-		 	padding: 15px;
-			float: left;
-			margin: 0px;
+		body {
+			background-color: #63431c;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 15% 50px 50px 50px;
 		}
 
-		.linhas:nth-child(1) > .colunas:nth-child(1) {
-		 	/*color: orange;*/
+		table {
+			border-collapse: collapse;
+			border: 1px solid #000;
+		}
+
+		td {
+			width: 6px;
+			height: 6px;
+			border: 0;
 		}
 
 
@@ -24,5 +30,5 @@
 <body>
 	<div id="table"></div>
 </body>	
-	<script src="script.js"></script>
+<script src="script.js"></script>
 </html>
