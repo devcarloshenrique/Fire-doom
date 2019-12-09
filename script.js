@@ -40,7 +40,7 @@ function estruturaArray(colunas , linhas) {
 
 		var chaveArray = td.length - 1
 
-		var repetidor = 0
+		// var repetidor = 0
 
 		var efeito = (chaveCores) => {
 			
@@ -54,31 +54,41 @@ function estruturaArray(colunas , linhas) {
 
 		setInterval(() => {
 
-			let chavesAleatorias = efeito(chaveCores)
+				// debugger;
 
-			td[chaveArray].style.backgroundColor = `rgb( ${ cores[chavesAleatorias].r }, ${ cores[chavesAleatorias].g }, ${ cores[chavesAleatorias].b } )`
+			if(chaveCores != 0 || chaveCores == 0){
 
+				var repetidor = 0
 
-			if(repetidor == 20) {
+				while(repetidor < 20){
 
-				chaveCores > 0 ? chaveCores-- : 0
+			 		let chavesAleatorias = efeito(chaveCores)
+			 		
+					td[chaveArray].style.backgroundColor = `rgb( ${ cores[chavesAleatorias].r }, ${ cores[chavesAleatorias].g }, ${ cores[chavesAleatorias].b } )`
 				
-				repetidor = 0
+					chaveArray > 0 ? chaveArray-- : 0
+
+					repetidor += 1
+				}
+
+			}
 			
-			} 
+			chaveCores > 0 ? chaveCores-- :
 
-			repetidor++
-			chaveArray > 0 ? chaveArray-- : 0
+			console.log(chaveCores)
 
-		}, 1)
+
+		}, 100)
 
 	}
 
-	setInterval(()=> {
 
-		slide1(fireColorsPalette)		
-
-	 },1)
 
 	estruturaArray()
 
+	setInterval(() => {
+
+
+	slide1(fireColorsPalette)		
+
+	}, 100)
